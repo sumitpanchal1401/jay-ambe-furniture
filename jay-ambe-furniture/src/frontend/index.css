@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Jay Ambe Furniture — Clean Modern palette */
+    /* Background: #FFFFFF → oklch(1.000 0 0) */
+    --background: 1.000 0 0;
+    /* Foreground: #111827 → oklch(0.198 0.014 264) */
+    --foreground: 0.198 0.014 264;
+    /* Card / section bg: #F9FAFB → oklch(0.985 0.002 247) */
+    --card: 0.985 0.002 247;
+    --card-foreground: 0.198 0.014 264;
+    /* Popover */
+    --popover: 1.000 0 0;
+    --popover-foreground: 0.198 0.014 264;
+    /* Primary: #374151 dark gray → oklch(0.373 0.011 264) */
+    --primary: 0.373 0.011 264;
+    --primary-foreground: 1.000 0 0;
+    /* Secondary */
+    --secondary: 0.985 0.002 247;
+    --secondary-foreground: 0.198 0.014 264;
+    /* Muted */
+    --muted: 0.970 0.003 247;
+    --muted-foreground: 0.520 0.015 264;
+    /* Accent: #374151 gray */
+    --accent: 0.373 0.011 264;
+    --accent-foreground: 1.000 0 0;
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    /* Border: #E5E7EB → oklch(0.916 0.005 264) */
+    --border: 0.916 0.005 264;
+    /* Input */
+    --input: 0.916 0.005 264;
+    /* Ring */
+    --ring: 0.373 0.011 264;
+
+    /* Chart */
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.985 0.002 247;
+    --sidebar-foreground: 0.198 0.014 264;
+    --sidebar-primary: 0.373 0.011 264;
+    --sidebar-primary-foreground: 1.000 0 0;
+    --sidebar-accent: 0.970 0.003 247;
+    --sidebar-accent-foreground: 0.198 0.014 264;
+    --sidebar-border: 0.916 0.005 264;
+    --sidebar-ring: 0.373 0.011 264;
+
+    /* Brand custom */
+    --brand-primary: 0.373 0.011 264;
+    --brand-cta: 0.373 0.011 264;
+    --brand-bg: 1.000 0 0;
+    --brand-card: 0.985 0.002 247;
+    /* Footer: #F9FAFB light → oklch(0.985 0.002 247) */
+    --brand-footer: 0.985 0.002 247;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-poppins;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  /* Smooth reveal animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out both;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out both;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
